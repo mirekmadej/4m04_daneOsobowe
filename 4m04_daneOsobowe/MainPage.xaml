@@ -6,12 +6,16 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
+            Padding="30"
             VerticalOptions="Start">
+      
 
-            <Grid
+            <Frame >
+
+                <Grid
                 RowSpacing="10">
                 <Grid.RowDefinitions>
+                    <RowDefinition />              
                     <RowDefinition />              
                     <RowDefinition />              
                     <RowDefinition />              
@@ -20,39 +24,49 @@
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
+                    <Label 
+                        Text="dane osobowe"
+                        x:Name="lblDaneOsobowe"
+                        TranslationY="-70"
+                        Grid.Column="0"
+                        Grid.Row="1" 
+                        
+                        />
 
-                <Label
+                    <Label
                     Text="Imię:"
-                    Grid.Column="0"
-                    Grid.Row="0"                
-                    />
-                <Label
-                    Text="nazwisko:"
                     Grid.Column="0"
                     Grid.Row="1"                
                     />
                 <Label
-                    Text="Stanowisko:"
+                    Text="nazwisko:"
                     Grid.Column="0"
                     Grid.Row="2"                
                     />
-                <Entry
-                    x:Name="entImie"
-                    Grid.Row="0"
-                    Grid.Column="1"
+                <Label
+                    Text="Stanowisko:"
+                    Grid.Column="0"
+                    Grid.Row="3"                
                     />
                 <Entry
-                    x:Name="entNazwisko"
+                    x:Name="entImie"
                     Grid.Row="1"
                     Grid.Column="1"
                     />
                 <Entry
-                    x:Name="entStanowisko"
+                    x:Name="entNazwisko"
                     Grid.Row="2"
+                    Grid.Column="1"
+                    />
+                <Entry
+                    x:Name="entStanowisko"
+                    Grid.Row="3"
                     Grid.Column="1"
                     />
 
             </Grid>
+            
+            </Frame>
 
             <Button
                 Text="pokaż"
@@ -62,10 +76,25 @@
             <Label
                 x:Name="lblWynik"
                 Text="wynik"
+                IsVisible="false"
                 />
 
 
+            <Grid VerticalOptions="Center" Padding="1" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" CornerRadius="10" BorderColor="Red" HasShadow="False" Padding="10,20">
+                    <BoxView HeightRequest="150">
 
+                    </BoxView>
+                </Frame>
+
+                <StackLayout Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Start" TranslationY="-10" Padding="10,0" BackgroundColor="White">
+                    <Label Text="Sample Text" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                </StackLayout>
+
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

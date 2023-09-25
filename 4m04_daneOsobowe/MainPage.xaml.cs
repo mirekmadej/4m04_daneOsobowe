@@ -11,7 +11,11 @@
 
         private void btnPokazClicked(object sender, EventArgs e)
         {
-
+            string wynik = entImie.Text + " " + entNazwisko.Text + " " + entStanowisko.Text;
+            lblWynik.Text = wynik;
+            SemanticScreenReader.Announce(lblWynik.Text);
+            lblWynik.IsVisible = true;
+            lblDaneOsobowe.IsVisible = false;
         }
 
 
