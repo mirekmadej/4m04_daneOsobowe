@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_4m04_daneOsobowe.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+            <Grid
+                RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />              
+                    <RowDefinition />              
+                    <RowDefinition />              
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="Imię:"
+                    Grid.Column="0"
+                    Grid.Row="0"                
+                    />
+                <Label
+                    Text="nazwisko:"
+                    Grid.Column="0"
+                    Grid.Row="1"                
+                    />
+                <Label
+                    Text="Stanowisko:"
+                    Grid.Column="0"
+                    Grid.Row="2"                
+                    />
+                <Entry
+                    x:Name="entImie"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    />
+                <Entry
+                    x:Name="entNazwisko"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    />
+                <Entry
+                    x:Name="entStanowisko"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    />
+
+            </Grid>
+
+            <Button
+                Text="pokaż"
+                Clicked="btnPokazClicked"
+                WidthRequest="100"
+                />
+            <Label
+                x:Name="lblWynik"
+                Text="wynik"
+                />
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
